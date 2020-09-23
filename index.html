@@ -4,31 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Markdown Preview</title>
+    <link rel="icon" href="./favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/railscasts.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.0/codemirror.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.0/theme/material-ocean.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css">
     <link rel="stylesheet" href="styles/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.0/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.0/mode/markdown/markdown.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/11.0.1/markdown-it.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script>
-    <script src="./scripts/main.js" defer></script>
 </head>
 <body>
     <header class="header">Markdown Preview</header>
     <div #app class="container">
-
+        <div class="toolbar">
+            <button id="icon-select" class="button" title="Seleccionar todo">
+                <span class="fas fa-highlighter"></span>
+            </button>
+            <button id="icon-copy" class="button" title="Copiar">
+                <span class="fas fa-copy"></span>
+            </button>
+            <button id="icon-download" class="button" title="Descargar">
+                <span class="fas fa-download"></span>
+            </button>
+        </div>
         <textarea id="code" class="code"></textarea>
-
         <div id="preview" class="preview"></div>
 
     </div>
     <footer class="footer">
-        Markdown Preview &copy; 2020&nbsp;
+        Markdown Preview &copy;&nbsp;<span id="year"></span>&nbsp;
         <a class="owner" href="https://alexaguirre.com.ar" target="_blank">Alexlndn</a>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.0/codemirror.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.0/mode/markdown/markdown.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/11.0.1/markdown-it.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
 </body>
 </html>

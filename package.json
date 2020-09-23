@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node-sass -w src/scss/main.scss -o ./styles/ --source-map ./styles/ --outputStyle compressed"
+    "dev": "node-sass -w src/scss/ -o ./styles/ --source-map ./styles/ --outputStyle compressed"
   },
   "keywords": [],
   "author": "",

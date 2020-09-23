@@ -1,0 +1,23 @@
+%button {
+    background: var(--primary);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--fore-light);
+    cursor: pointer;
+    min-width: 34px / 16px * 1rem;
+    outline: none;
+    padding: 0.5rem;
+    transition: all var(--transition);
+
+    &:hover {
+        background: var(--primary-dark);
+    }
+
+    &:active {
+        background: var(--primary-darker);
+    }
+}
+
+.button {
+    @extend %button;
+}

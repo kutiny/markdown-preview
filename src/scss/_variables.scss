@@ -1,13 +1,19 @@
-$primary: #FBC02D;
 $primary: #006DC6;
+$primaryDark: darken($primary, 5);
+$primaryDarker: darken($primary, 10);
 $border: #DFE0E0;
 $foreLight: #F1F1F1;
 $foreDark: #212121;
+$transition: 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
 
 :root {
     --border: #{$border};
     --border-radius: 3px;
     --primary: #{$primary};
+    --primary-dark: #{$primaryDark};
+    --primary-darker: #{$primaryDarker};
     --fore-light: #{$foreLight};
     --fore-dark: #{$foreDark};
+
+    --transition: #{$transition};
 }

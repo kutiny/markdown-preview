@@ -5,28 +5,45 @@
 
 @import "./variables";
 @import "./blocks/_loader";
+@import "./components/_loader";
 
 .container {
     color: var(--fore-dark);
     display: grid;
     height: calc(100vh - 5rem);
-    gap: 0.5rem;
+    gap: 1rem;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2rem 1fr;
+    grid-template-areas: 'toolbar toolbar'
+                         'editor  preview';
     padding: 0.5rem;
+}
+
+.toolbar {
+    grid-area: toolbar;
 }
 
 .CodeMirror {
     border-radius: var(--border-radius);
     height: 100%;
     padding: 0.5rem;
+    grid-area: editor;
 }
 
 .preview {
     padding: 0.5rem;
     border: 1px solid var(--border);
     overflow-y: auto;
+    grid-area: preview;
 }
 
 .owner {
     color: var(--fore-light);
+}
+
+.imnothere {
+    position: absolute;
+    top: -200vh;
+    left: -200vw;
+    opacity: 0;
 }

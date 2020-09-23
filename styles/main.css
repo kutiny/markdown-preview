@@ -6,14 +6,18 @@
   --border: #DFE0E0;
   --border-radius: 3px;
   --primary: #006DC6;
+  --primary-dark: #005fad;
+  --primary-darker: #005193;
   --fore-light: #F1F1F1;
-  --fore-dark: #212121; }
+  --fore-dark: #212121;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 
 .header {
   align-items: center;
   background: var(--primary);
   color: var(--fore-light);
   display: flex;
+  font-size: 1.35rem;
   justify-content: center;
   height: 3rem; }
 
@@ -27,25 +31,53 @@
   justify-content: center;
   text-align: center; }
 
+.button {
+  background: var(--primary);
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--fore-light);
+  cursor: pointer;
+  min-width: 2.125rem;
+  outline: none;
+  padding: 0.5rem;
+  transition: all var(--transition); }
+  .button:hover {
+    background: var(--primary-dark); }
+  .button:active {
+    background: var(--primary-darker); }
+
 .container {
   color: var(--fore-dark);
   display: grid;
   height: calc(100vh - 5rem);
-  gap: 0.5rem;
+  gap: 1rem;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2rem 1fr;
+  grid-template-areas: 'toolbar toolbar' 'editor  preview';
   padding: 0.5rem; }
+
+.toolbar {
+  grid-area: toolbar; }
 
 .CodeMirror {
   border-radius: var(--border-radius);
   height: 100%;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  grid-area: editor; }
 
 .preview {
   padding: 0.5rem;
   border: 1px solid var(--border);
-  overflow-y: auto; }
+  overflow-y: auto;
+  grid-area: preview; }
 
 .owner {
   color: var(--fore-light); }
+
+.imnothere {
+  position: absolute;
+  top: -200vh;
+  left: -200vw;
+  opacity: 0; }
 
 /*# sourceMappingURL=main.css.map */
