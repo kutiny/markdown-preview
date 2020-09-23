@@ -1,7 +1,9 @@
 * {
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
   font-family: Roboto, sans-serif; }
+
+:root {
+  --border-radius: 3px; }
 
 .container {
   height: calc(100vh - 3rem);
@@ -9,6 +11,11 @@
   grid-template-columns: 1fr 1fr; }
 
 .CodeMirror {
-  height: 100% !important; }
+  border-radius: var(--border-radius);
+  height: 100%;
+  padding: 0.5rem; }
+
+.preview {
+  padding: 0.5rem; }
 
 /*# sourceMappingURL=main.css.map */

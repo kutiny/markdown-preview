@@ -1,10 +1,28 @@
 (function init() {
     document.addEventListener('DOMContentLoaded', () => {
+        const MarkdownIt = window.markdownit({
+            highlight: function(str, lang) {
+                if(lang && hljs.getLanguage(lang)) {
+                    try {
+                        return '<pre class="hljs"><code>' +
+                        hljs.highlight(lang, str, true).value +
+                        '</code></pre>';
+                    } catch (_) { };
+                }
+                return '';
+            }
+        });
         const cmTextArea = document.querySelector('#code');
         const codemirrorInstance = CodeMirror.fromTextArea(cmTextArea, {
             mode: 'markdown',
             theme: 'material-ocean',
         });
-        codemirrorInstance.setValue('# Hola');
+        const previewElement = document.querySelector('#preview');
+
+        codemirrorInstance.on('change', () => {
+            const result = MarkdownIt.render(codemirrorInstance.getValue());
+            previewElement.innerHTML = result;
+        });
+        
     })
 })();

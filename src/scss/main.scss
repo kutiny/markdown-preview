@@ -1,8 +1,9 @@
 * {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
     font-family: Roboto, sans-serif;
 }
+
+@import "./variables";
 
 .container {
     height: calc(100vh - 3rem);
@@ -11,5 +12,11 @@
 }
 
 .CodeMirror {
-    height: 100% !important;
+    border-radius: var(--border-radius);
+    height: 100%;
+    padding: 0.5rem;
+}
+
+.preview {
+    padding: 0.5rem;
 }
