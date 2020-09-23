@@ -1,5 +1,5 @@
 (function init() {
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', function() {
         const MarkdownIt = window.markdownit({
             highlight: function(str, lang) {
                 if(lang && hljs.getLanguage(lang)) {
@@ -19,10 +19,10 @@
         });
         const previewElement = document.querySelector('#preview');
 
-        codemirrorInstance.on('change', () => {
+        codemirrorInstance.on('change', function() {
             const result = MarkdownIt.render(codemirrorInstance.getValue());
             previewElement.innerHTML = result;
         });
-        
+
     })
 })();
