@@ -5,9 +5,9 @@
 :root {
   --border: #DFE0E0;
   --border-radius: 3px;
-  --primary: #006DC6;
-  --primary-dark: #005fad;
-  --primary-darker: #005193;
+  --primary: #252525;
+  --primary-dark: #181818;
+  --primary-darker: #0c0c0c;
   --fore-light: #F1F1F1;
   --fore-dark: #212121;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -46,6 +46,9 @@
   .button:active {
     background: var(--primary-darker); }
 
+body {
+  background: #F1F1F1; }
+
 .container {
   color: var(--fore-dark);
   display: grid;
@@ -66,8 +69,10 @@
   grid-area: editor; }
 
 .preview {
+  background: #FFFFFF;
   padding: 0.5rem;
   border: 1px solid var(--border);
+  border-radius: var(--border-radius);
   overflow-y: auto;
   grid-area: preview; }
 
