@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Preview</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="./node_modules/codemirror/lib/codemirror.css" rel="stylesheet" />
+    <link href="./node_modules/codemirror/theme/material-ocean.css" rel="stylesheet" />
+    <script src="./node_modules/codemirror/lib/codemirror.js"></script>
+    <script src="./node_modules/codemirror/mode/markdown/markdown.js"></script>
+    <script src="./scripts/main.js" defer></script>
+</head>
+<body>
+    <header>Markdown Preview</header>
+    <div #app class="container">
+
+        <textarea id="code" class="code"></textarea>
+
+        <div class="preview"></div>
+
+    </div>
+</body>
+</html>
