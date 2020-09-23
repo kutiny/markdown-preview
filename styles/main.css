@@ -5,14 +5,14 @@
 :root {
   --border: #DFE0E0;
   --border-radius: 3px;
-  --primary: #FBC02D;
+  --primary: #006DC6;
   --fore-light: #F1F1F1;
   --fore-dark: #212121; }
 
 .header {
   align-items: center;
   background: var(--primary);
-  color: var(--fore-dark);
+  color: var(--fore-light);
   display: flex;
   justify-content: center;
   height: 3rem; }
@@ -20,9 +20,9 @@
 .footer {
   align-items: center;
   background: var(--primary);
-  color: var(--fore-dark);
+  color: var(--fore-light);
   display: flex;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   height: 2rem;
   justify-content: center;
   text-align: center; }
@@ -44,5 +44,8 @@
   padding: 0.5rem;
   border: 1px solid var(--border);
   overflow-y: auto; }
+
+.owner {
+  color: var(--fore-light); }
 
 /*# sourceMappingURL=main.css.map */
