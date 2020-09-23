@@ -4,11 +4,15 @@
 }
 
 @import "./variables";
+@import "./blocks/_loader";
 
 .container {
-    height: calc(100vh - 3rem);
+    color: var(--fore-dark);
     display: grid;
+    height: calc(100vh - 5rem);
+    gap: 0.5rem;
     grid-template-columns: 1fr 1fr;
+    padding: 0.5rem;
 }
 
 .CodeMirror {
@@ -19,4 +23,6 @@
 
 .preview {
     padding: 0.5rem;
+    border: 1px solid var(--border);
+    overflow-y: auto;
 }

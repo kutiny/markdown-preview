@@ -1,3 +1,12 @@
+$primary: #FBC02D;
+$border: #DFE0E0;
+$foreLight: #F1F1F1;
+$foreDark: #212121;
+
 :root {
+    --border: #{$border};
     --border-radius: 3px;
+    --primary: #{$primary};
+    --fore-light: #{$foreLight};
+    --fore-dark: #{$foreDark};
 }

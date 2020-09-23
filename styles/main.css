@@ -3,12 +3,37 @@
   font-family: Roboto, sans-serif; }
 
 :root {
-  --border-radius: 3px; }
+  --border: #DFE0E0;
+  --border-radius: 3px;
+  --primary: #FBC02D;
+  --fore-light: #F1F1F1;
+  --fore-dark: #212121; }
+
+.header {
+  align-items: center;
+  background: var(--primary);
+  color: var(--fore-dark);
+  display: flex;
+  justify-content: center;
+  height: 3rem; }
+
+.footer {
+  align-items: center;
+  background: var(--primary);
+  color: var(--fore-dark);
+  display: flex;
+  font-size: 0.9rem;
+  height: 2rem;
+  justify-content: center;
+  text-align: center; }
 
 .container {
-  height: calc(100vh - 3rem);
+  color: var(--fore-dark);
   display: grid;
-  grid-template-columns: 1fr 1fr; }
+  height: calc(100vh - 5rem);
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.5rem; }
 
 .CodeMirror {
   border-radius: var(--border-radius);
@@ -16,6 +41,8 @@
   padding: 0.5rem; }
 
 .preview {
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  overflow-y: auto; }
 
 /*# sourceMappingURL=main.css.map */
