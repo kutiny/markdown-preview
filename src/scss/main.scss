@@ -17,10 +17,17 @@ body {
     height: calc(100vh - 5rem);
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2rem 1fr;
+    grid-template-rows: 2rem 1fr 1fr;
     grid-template-areas: 'toolbar toolbar'
-                         'editor  preview';
+                         'editor  editor'
+                         'preview preview';
     padding: 0.5rem;
+    @media screen and (min-width: 960px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2rem 1fr;
+        grid-template-areas: 'toolbar toolbar'
+                         'editor  preview';
+    }
 }
 
 .toolbar {
